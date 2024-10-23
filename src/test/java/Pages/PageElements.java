@@ -98,6 +98,34 @@ public class PageElements {
     @FindBy(xpath = "//input[@type='button']")
     public WebElement sendPayment;
 
+    @FindBy(xpath = "(//div[@id='leftPanel']/ul/li)[1]")
+    public WebElement newAccount;
+
+    @FindBy(id = "type")
+    public WebElement accountType;
+
+    @FindBy(xpath = "//input[@type='button']")
+    public WebElement newAccountButton;
+
+    @FindBy(xpath = "(//div[@id='leftPanel']/ul/li)[3]")
+    public WebElement transferFunds;
+
+    @FindBy(id = "amount")
+    public WebElement amountFunds;
+
+    @FindBy(id = "fromAccountId")
+    public WebElement fromAccount;
+
+    @FindBy(id = "toAccountId")
+    public WebElement toAccount;
+
+    @FindBy(xpath = "//input[@type='submit']")
+    public WebElement transferButton;
+
+    @FindBy(xpath = "(//div[@id='leftPanel']/ul/li)[6]")
+    public WebElement contactInfo;
+
+
 
     public WebElement getWebElement(String elementName){
         switch (elementName){
@@ -130,6 +158,15 @@ public class PageElements {
             case "verifyAccount":return verifyAccount;
             case "billAmount":return billAmount;
             case "billsendPayment":return sendPayment;
+            case "newAccount":return newAccount;
+            case "accountType":return accountType;
+            case "newAccountButton":return newAccountButton;
+            case "transferFunds":return transferFunds;
+            case "amountFunds":return amountFunds;
+            case "fromAccount":return fromAccount;
+            case "toAccount":return toAccount;
+            case "transferButton":return transferButton;
+            case "contactInfo":return contactInfo;
 
         }
     return null;}
