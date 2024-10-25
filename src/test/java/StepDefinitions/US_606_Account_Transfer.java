@@ -17,7 +17,7 @@ public class US_606_Account_Transfer {
 
     @And("Select accounts and fill amount then click on the transfer button")
     public void selectAccountsAndFillAmountThenClickOnTheTransferButton() {
-        parentPage.mySendKeys(pageElements.amountFunds,"50");
+        parentPage.mySendKeys(pageElements.amount,"50");
         Select select=new Select(pageElements.fromAccount);
         select.selectByIndex(0);
         Select select1=new Select(pageElements.toAccount);
@@ -25,7 +25,7 @@ public class US_606_Account_Transfer {
         parentPage.myClick(pageElements.transferButton);
 
         parentPage.myClick(pageElements.transferFunds);
-        parentPage.mySendKeys(pageElements.amountFunds,"70");
+        parentPage.mySendKeys(pageElements.amount,"70");
         select.selectByIndex(1);
         select1.selectByIndex(2);
         parentPage.myClick(pageElements.transferButton);

@@ -111,7 +111,7 @@ public class PageElements {
     public WebElement transferFunds;
 
     @FindBy(id = "amount")
-    public WebElement amountFunds;
+    public WebElement amount;
 
     @FindBy(id = "fromAccountId")
     public WebElement fromAccount;
@@ -124,6 +124,19 @@ public class PageElements {
 
     @FindBy(xpath = "(//div[@id='leftPanel']/ul/li)[6]")
     public WebElement contactInfo;
+
+    @FindBy(xpath = "(//div[@id='leftPanel']/ul/li)[7]")
+    public WebElement loanRequest;
+
+    @FindBy(id = "downPayment")
+    public WebElement downPayment;
+
+    @FindBy(xpath = "//input[@type='button']")
+    public WebElement applyNow;
+
+    @FindBy(id = "requestLoanResult")
+    public WebElement loanResult;
+
 
 
 
@@ -162,11 +175,15 @@ public class PageElements {
             case "accountType":return accountType;
             case "newAccountButton":return newAccountButton;
             case "transferFunds":return transferFunds;
-            case "amountFunds":return amountFunds;
+            case "amountFunds":return amount;
             case "fromAccount":return fromAccount;
             case "toAccount":return toAccount;
             case "transferButton":return transferButton;
             case "contactInfo":return contactInfo;
+            case "loanRequest":return loanRequest;
+            case "downPayment":return downPayment;
+            case "applyNow":return applyNow;
+            case "loanResult":return loanResult;
 
         }
     return null;}
